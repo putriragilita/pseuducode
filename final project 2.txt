@@ -1,0 +1,12 @@
+INPUT "menu makanan" AS STRING
+INPUT "jumlah menu" AS INT
+
+IF "jumlah menu"  MORE THAN OR EQUAL 1
+	WRITE READ "lokasi pengiriman" AS STRING
+	WRITE READ "pembayaran" AS STRING 
+	IF "pembayaran" EQUAL "dompet digital" OR "pembayaran" EQUAL "tunai"
+		RETURN "transaksi dibuat"
+	ENDIF
+ELSE
+	PRINT "tidak ada pesanan"
+ENDIF
